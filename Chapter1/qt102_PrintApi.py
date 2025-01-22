@@ -5,3 +5,12 @@
 # File    : qt102_PrintApi.py
 # Software: PyCharm
 
+
+import sys
+from PyQt5.QtWidgets import QWidget
+
+out = sys.stdout
+sys.stdout = open("./QWidget.txt", "w")
+help(QWidget)
+sys.stdout.close()
+sys.stdout = out
